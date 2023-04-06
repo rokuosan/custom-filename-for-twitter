@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
-    <title>Options</title>
-    <script src="../js/options.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/options.css">
+    <title>設定</title>
 </head>
-
 <body>
-    <h1>Options</h1>
-    <label for="filename-input">Filename:</label>
-    <input type="text" id="filename-input">
-    <button id="save-button">Save</button>
-</body>
+    <div class="container">
+        <h1>Twitter画像名変更くん 設定</h1>
 
+        <div id="config-list">
+            <div>
+                <label for="filename-input">ファイル名</label>
+                <div id="filename-form">
+                    <input type="text" id="filename-input" placeholder="Twitter_@{screen_id}_{post_id}">
+                    <button id="filename-save">保存</button>
+                </div>
+                <div>
+                    <p>
+                        プレースホルダとして以下のものが利用可能です。
+                    </p>
+                    <ul>
+                        <li>{screen_id}</li>
+                        <li>{post_id}</li>
+                        <li>{current_time}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div>
+                <label for="ext-select">拡張子</label>
+                <select name="extension" id="extension">
+                    <option value="jpg">JPEG(.jpg)</option>
+                    <option value="png">PNG(.png)</option>
+                </select>
+            </div> -->
+        </div>
+
+
+
+        <script src="../js/options.js"></script>
+    </div>
+</body>
 </html>
