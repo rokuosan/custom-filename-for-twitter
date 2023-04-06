@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Twitterで保存する画像名を変更するよ君",
+    "version": "1.0",
+    "description": "Twitterに投稿された画像を投稿者のスクリーンIDとその投稿のID(URLの/status/の直後にくる文字列)を含めて保存します",
+    "permissions": [
+        "contextMenus",
+        "downloads",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "resources/html/options.html"
+    },
+    "options_ui": {
+        "page": "resources/html/options.html",
+        "open_in_tab": true
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "resources/js/options.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
